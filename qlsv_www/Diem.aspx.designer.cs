@@ -11,7 +11,7 @@ namespace qlsv_www
 {
 
 
-    public partial class Wellcome
+    public partial class Diem
     {
 
         /// <summary>
@@ -33,12 +33,30 @@ namespace qlsv_www
         protected global::System.Web.UI.WebControls.DropDownList ddlMaLop;
 
         /// <summary>
-        /// btnHienThi control.
+        /// btnLoadKCT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnHienThi;
+        protected global::System.Web.UI.WebControls.Button btnLoadKCT;
+
+        /// <summary>
+        /// ddlMaMon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlMaMon;
+
+        /// <summary>
+        /// btnHienThiDiem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnHienThiDiem;
     }
 }

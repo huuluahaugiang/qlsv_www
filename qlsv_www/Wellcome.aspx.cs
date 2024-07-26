@@ -13,8 +13,24 @@ namespace qlsv_www
     {    
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                LoadCboLop();
+            }
         }
-        
+        private void LoadCboLop()
+        {
+            MyDataBase db = new MyDataBase();
+            DataTable dt = new DataTable();
+            dt = db.GetDataBySqlString(@"SELECT DISTINCT b.MaLop, TenLop FROM LOP a, SINHVIEN b WHERE a.MaLop=b.MaLop");
+            ddlMaLop.DataSource = dt;
+            ddlMaLop.DataTextField = "TenLop";
+            ddlMaLop.DataValueField = "MaLop";
+            ddlMaLop.DataBind();
+        }
+        protected void btnHienThi_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SinhVien_Loc.aspx?ma="+ ddlMaLop.SelectedValue.ToString());
+        }
     }
 }
